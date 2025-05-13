@@ -1,0 +1,28 @@
+Работа программы обмена информацией через FIFO:
+
+va@alexandr-Aspire-Z5751:~/OS_2025$ ./pr010.out
+Не удалось сохранить FIFO
+martynova@alexandr-Aspire-Z5751:~/OS_2025$ git add otch3.txt otch9.txt pr003.c
+martynova@alexandr-Aspire-Z5751:~/OS_2025$ git commit -a -m "ДОбавили описанидвунаправленой связи через pipe"
+[main 0b1e1be] ДОбавили описанидвунаправленой связи через pipe
+ 3 files changed, 55 insertions(+)
+ create mode 100644 otch3.txt
+ create mode 100644 otch9.txt
+ create mode 100644 pr003.c
+martynova@alexandr-Aspire-Z5751:~/OS_2025$ stat fifo.file
+  Файл: fifo.file
+  Размер: 0             Блоков: 0          Блок В/В: 4096   файл-очередь
+Устройство: 8/4 Инода: 8258141     Ссылки: 1
+Доступ: (0664/prw-rw-r--)  Uid: ( 1187/martynova)   Gid: ( 1187/martynova)
+Доступ:        2025-05-13 16:58:12.811382589 +0700
+Модифицирован: 2025-05-13 16:58:12.811382589 +0700
+Изменён:       2025-05-13 16:58:12.811382589 +0700
+Создан:        2025-05-13 16:58:12.810382589 +0700
+martynova@alexandr-Aspire-Z5751:~/OS_2025$ rm fifo.file
+martynova@alexandr-Aspire-Z5751:~/OS_2025$ ./pr010.out
+Родительский процесс начал работу
+Процесс-ребенок начал работу
+Строка записана в FIFO для процесса родителя
+Родитель завершил работу
+Прочитанная строка: Строка для чтения процессом-ребенком
+Процесс-ребенок завершил работу
