@@ -14,10 +14,10 @@ int main() {
   c = fork();
   a = a+1;
   prid = getpid();
-    parprid = getppid();
-       printf("После выполнения fork():\n");
-           printf("Ид. текущего процесса:%d\n", prid);
-               printf("Ид. родительского процесса процесса:%d\n", parprid);
-                   printf("Значение переменной  а: %d", a);
+  parprid = getppid();
+  printf("После выполнения fork():\n");
+  printf("Ид. текущего процесса:%d\n", prid);
+  printf("Ид. родительского процесса процесса:%d\n", parprid);
+  printf("Значение переменной  а: %d", a);
 return 0;
 }
